@@ -13,8 +13,8 @@ export default class Events {
   name: string;
 
   @Column()
-  date_event: Date;
+  start_date: string;
 
   @Column()
-  hour: string;
+  end_date: string;
 }

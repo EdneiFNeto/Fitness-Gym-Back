@@ -32,8 +32,10 @@ export default class EventsRepository implements IEventsRepository {
   }
 
   public async update(dto:IEventsDTO): Promise<void> {
-    const { id, date_event, hour } = dto;
-    await this.ormRepository.update(id, { date_event, hour });
+    const {
+      id, name, start_date, end_date,
+    } = dto;
+    await this.ormRepository.update(id, { name, start_date, end_date });
   }
 
   public async delete(id: string): Promise<void> {

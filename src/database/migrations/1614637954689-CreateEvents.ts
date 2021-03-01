@@ -17,12 +17,12 @@ export default class CreateEvents1614637954689 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'date_event',
-            type: 'date',
+            name: 'start_date',
+            type: 'timestamp',
           },
           {
-            name: 'hour',
-            type: 'time',
+            name: 'end_date',
+            type: 'timestamp',
           },
           {
             name: 'created_at',

@@ -8,8 +8,8 @@ function mock(): IEventsDTO {
   return {
     id: '1234',
     name: 'Zumba',
-    date_event: new Date(),
-    hour: '12:00',
+    start_date: '12:00',
+    end_date: '12:00',
   };
 }
 
@@ -23,7 +23,7 @@ describe('CreateUser', () => {
   it('showld be able to create a new Events', async () => {
     const { sut } = createSut();
     const payts = await sut.execute(mock());
-    expect(payts.date_event).toBe(payts.date_event);
+    expect(payts.start_date).toBe(payts.start_date);
   });
 
   it('showld lista all Events', async () => {
@@ -37,7 +37,7 @@ describe('CreateUser', () => {
     const { sut } = createSut();
     const payts = await sut.execute(mock());
     const t = await sut.show(payts.id);
-    expect(t.date_event).toBe(undefined);
+    expect(t.start_date).toBe('12:00');
   });
 
   it('showld update  Events', async () => {

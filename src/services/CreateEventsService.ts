@@ -6,8 +6,8 @@ import { inject, injectable } from 'tsyringe';
 interface IRequest {
   id?: string;
   name: string;
-  date_event: Date;
-  hour: string;
+  start_date: string;
+  end_date: string;
 }
 
 @injectable()
@@ -19,13 +19,13 @@ export default class CreateEventsService {
 
   public async execute({
     name,
-    date_event,
-    hour,
+    start_date,
+    end_date,
   }: IRequest): Promise<Events> {
     const events = await this.repository.create({
       name,
-      date_event,
-      hour,
+      start_date,
+      end_date,
     });
     return events;
   }

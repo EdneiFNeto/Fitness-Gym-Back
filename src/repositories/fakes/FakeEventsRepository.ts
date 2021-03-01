@@ -17,8 +17,8 @@ export default class EventsRepository implements IEventsRepository {
     Object.assign(t, {
       id: uuid(),
       student_id: dto.name,
-      register_date: dto.date_event,
-      type: dto.hour,
+      start_date: dto.start_date,
+      end_date: dto.end_date,
     });
 
     this.events.push(t);
@@ -40,8 +40,9 @@ export default class EventsRepository implements IEventsRepository {
   public async update(dto: IEventsDTO): Promise<void> {
     const pays = this.events.filter((t) => t.id === dto.id);
     pays.forEach((element, index) => {
-      this.events[index].date_event = dto.date_event;
-      this.events[index].hour = dto.hour;
+      this.events[index].start_date = dto.start_date;
+      this.events[index].end_date = dto.end_date;
+      this.events[index].name = dto.name;
     });
   }
 }
