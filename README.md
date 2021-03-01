@@ -2,9 +2,9 @@
 
 
 # Introdução
-Api desenvolvida em nodo com auxilio de Typescript. Nesta API foi desenvolvida
+Api desenvolvida em node com  Typescript. Nesta API foi desenvolvida
 para auxiliar em no desenvolvimento de sistema
-[House-Manager-front](https://github.com/EdneiFNeto/House-Manager-front).
+[Fitness-Gym-front](https://github.com/EdneiFNeto/FitnessGym-front).
 
 ### ORM
 Toda a parte de integração com banco de dados,onde são feita as consultas, configurações foi instalado a lib [typeorm](https://typeorm.io/#/)
